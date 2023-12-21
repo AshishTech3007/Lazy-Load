@@ -4,7 +4,7 @@ This project demonstrates the implementation of Lazy Load using Intersection Obs
 
 ## Table of Contents
 
-- [Introduction](#intro)
+- [Introduction](#introduction)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Structure](#structure)
