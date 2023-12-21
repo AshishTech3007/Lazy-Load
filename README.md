@@ -27,8 +27,8 @@ The project consists of sections with dynamic content and images loaded using In
 
 ## Structure
 - index.html: The main HTML file containing sections and script tags. ``` index.html ```
-- style.css: The stylesheet file with styles for sections and images.
-- script.js: The JavaScript file implementing Intersection Observer.
+- style.css: The stylesheet file with styles for sections and images. ``` index.css ```
+- script.js: The JavaScript file implementing Intersection Observer. ``` index.js ```
   
 ## Callback-Functions
 ### callback
