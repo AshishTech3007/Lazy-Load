@@ -18,8 +18,7 @@ To get started with this project, follow these steps:
    ```bash
    git clone <repository-url>
 
-## usage
-### Usage
+### Usage(#usage)
 The project consists of sections with dynamic content and images loaded using Intersection Observer. The relevant classes are utilized to showcase visibility changes.
 
 ## structure
