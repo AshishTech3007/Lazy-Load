@@ -75,6 +75,7 @@ imageall.forEach((divimgcont) => {
     const img =divimgcont.querySelector('img');
     observer3.observe(img);
 });
+
 // let observer3 = new IntersectionObserver(callback3, options);
 // const blurload=document.querySelectorAll('.imagecont');
 // blurload.forEach(div=>{
