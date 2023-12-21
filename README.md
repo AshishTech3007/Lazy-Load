@@ -1,4 +1,4 @@
-# Intersection Observer Demo
+# Lazy Loading using Intersection Observer Demo
 
 This project demonstrates the implementation of Lazy Load using Intersection Observer to trigger actions when elements enter or exit the viewport.
 
