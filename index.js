@@ -15,27 +15,28 @@ let callback = (entries, observer) => {
     });
 }
 let callback3 = (entries, observer) => {
-    entries.forEach(element => {          
+    entries.forEach(element => {
         // element.target.classList.toggle("show",element.isIntersecting);     
-        if(element.isIntersecting && element.target.className==='image')
-        {
-            let parentdiv=element.target.parentElement;
-            function loaded(){
+        if (element.isIntersecting && element.target.className === 'image') {
+            let parentdiv = element.target.parentElement;
+            function loaded() {
                 parentdiv.classList.add("loaded");
-            }    
-            
-            if(element.target.complete){
-                loaded();                
             }
-            else{
+
+            if (element.target.complete) {
+                setTimeout(() => {
+                    loaded();
+                }, 1000)
+            }
+            else {
                 // once the image gets download it calls this loaded function 
-                element.target.addEventListener('load',loaded);
+                element.target.addEventListener('load', loaded);
+                element.target.addEventListener('error', loaded);
             }
             // parentdiv.classList.add('loaded');
-            let imageUrl=element.target.getAttribute('data-img');
-            if(imageUrl)
-            {
-                element.target.src=imageUrl;
+            let imageUrl = element.target.getAttribute('data-img');
+            if (imageUrl) {
+                element.target.src = imageUrl;
                 observer3.unobserve(element.target);
             }
         }
@@ -51,8 +52,8 @@ let callback2 = (entries, observer) => {
         // : (alert('out'), element.target.classList.remove('activesection'));
         // element.target.classList.toggle('activesection', (element.isIntersecting) && isSection);
         if ((element.isIntersecting) && isSection) {
-        //    alert('hi');
-            element.target.classList.add('activesection');                   
+            //    alert('hi');
+            element.target.classList.add('activesection');
         } else {
             // alert('out');
             element.target.classList.remove('activesection');
@@ -72,7 +73,7 @@ sectionall.forEach((sectionentry) => {
 
 let observer3 = new IntersectionObserver(callback3, options);
 imageall.forEach((divimgcont) => {
-    const img =divimgcont.querySelector('img');
+    const img = divimgcont.querySelector('img');
     observer3.observe(img);
 });
 
@@ -87,10 +88,10 @@ imageall.forEach((divimgcont) => {
 //         observer3.observe(img);
 //     }
 //     if(img.complete){
-//         loaded();                
+//         loaded();
 //     }
 //     else{
-//         // once the image gets download it calls this loaded function 
+//         // once the image gets download it calls this loaded function
 //         img.addEventListener('load',loaded);
 //     }
 // });
