@@ -26,6 +26,7 @@ let callback3 = (entries, observer) => {
 
             if (element.target.complete) {
                 setTimeout(() => {
+                    // to allow fully load images 
                     loaded();
                 }, 1000)
             }
