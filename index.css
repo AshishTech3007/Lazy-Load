@@ -54,7 +54,7 @@
     height: 90%;
     object-fit: cover;
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     object-position: center;
     border: none;
     animation: skeleton-loading 1s linear infinite alternate;
