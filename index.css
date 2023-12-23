@@ -38,7 +38,7 @@
 
 .skeletontext {
     width: 90%;
-    height: 0.5rem;
+    height: 0.5em;
     margin: 0 0 0.25rem 0;
     border-radius: 0.125rem;
     text-align: left;
@@ -54,7 +54,6 @@
     height: 90%;
     object-fit: cover;
     position: absolute;
-    opacity: 0;
     object-position: center;
     border: none;
     animation: skeleton-loading 1s linear infinite alternate;
@@ -71,10 +70,7 @@
     display: block;
 }
 
-.imagecont.loaded>img {
-    opacity: 1;
-    transition: all 200ms ease-in-out;
-}
+
 
 @keyframes skeleton-loading {
     0% {
@@ -86,12 +82,13 @@
     }
 }
 
-.imagecont.loaded {
-    opacity: 1;
-}
-
 .imagecont.loaded img {
     animation: none;
+    transition: all 200ms ease-in-out;
+}
+
+.imagecont.loaded {
+    opacity: 1;
 }
 
 .imagecont.loaded .skeletontext {

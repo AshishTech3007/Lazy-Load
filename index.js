@@ -6,7 +6,7 @@ let options = {
 
 const divitem = document.querySelector('.checkelement'); // Define divitem outside of the callbacks
 const sectionall = document.querySelectorAll('.min-height');
-const imageall = document.querySelectorAll('.imagecont');
+const imageContainer = document.querySelectorAll('.imagecont');
 let callback = (entries, observer) => {
     entries.forEach(element => {
         if (element.target.classList.contains('checkelement')) {
@@ -16,7 +16,8 @@ let callback = (entries, observer) => {
 }
 let callback3 = (entries, observer) => {
     entries.forEach(element => {
-        // element.target.classList.toggle("show",element.isIntersecting);     
+        // element.target.classList.toggle("show",element.isIntersecting);  
+        // console.log(element.target);   
         if (element.isIntersecting && element.target.className === 'image') {
             let parentdiv = element.target.parentElement;
             function loaded() {
@@ -72,7 +73,7 @@ sectionall.forEach((sectionentry) => {
 
 
 let observer3 = new IntersectionObserver(callback3, options);
-imageall.forEach((divimgcont) => {
+imageContainer.forEach((divimgcont) => {
     const img = divimgcont.querySelector('img');
     observer3.observe(img);
 });
@@ -95,3 +96,26 @@ imageall.forEach((divimgcont) => {
 //         img.addEventListener('load',loaded);
 //     }
 // });
+
+let skeletontext_div = `
+<div class="loadingskeletoncontent">
+    <div class="skeletonheader">
+        <div class="skeletontext"></div>
+        <div class="skeletontext"></div>
+    </div>
+    <div class="skeletonbody">
+        <div class="skeletontext"></div>
+        <div class="skeletontext"></div>
+        <div class="skeletontext"></div>
+    </div>
+</div>`;
+
+imageContainer.forEach((localdiv) => {
+    // Insert the HTML string as the first child of the target element
+    localdiv.insertAdjacentHTML('afterbegin', skeletontext_div);
+});
+
+
+
+
+
