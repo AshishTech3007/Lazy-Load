@@ -17,7 +17,7 @@ let callback = (entries, observer) => {
 let callback3 = (entries, observer) => {
     entries.forEach(element => {
         // element.target.classList.toggle("show",element.isIntersecting);  
-        // console.log(element.target);   
+        // console.log(element.target);   p
         if (element.isIntersecting && element.target.className === 'image') {
             let parentdiv = element.target.parentElement;
             function loaded() {

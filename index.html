@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intersection Observer</title>
+    <link rel="stylesheet" href="loader.css">   
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="modal.css">
@@ -14,216 +15,223 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--   -->
+    <script src="loader.js"></script>
     <script src="index.js" defer></script>
 </head>
 
-<body>
-    <section class="min-height">
-        <div class="checkelement"></div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img1.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img2.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img3.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img1.png" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img4.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img2.png" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img5.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img10.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img6.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img7.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img8.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img9.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img10.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img11.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img12.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <img class="image" data-img="img13.jpg" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <div class="loadingskeletoncontent">
-                <div class="skeletonheader">
-                    <div class="skeletontext"></div>
-                    <div class="skeletontext"></div>
-                </div>
-                <div class="skeletonbody">
-                    <div class="skeletontext"></div>
-                    <div class="skeletontext"></div>
-                    <div class="skeletontext"></div>
-                </div>
-
-            </div>
-            <h1>Placeholder Text</h1>
-            <img class="image" data-img="img3.jpg" />
-        </div>
-        <div class="imagecont">
-            <img class="image" data-img="img1.png" />
-        </div>
-    </section>
-    <section class="min-height">
-        <div class="imagecont">
-            <h1 class="main-heading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, praesentium
-                accusantium! Quas veniam
-                illo at velit, debitis, ad magnam cupiditate totam recusandae blanditiis culpa nostrum itaque facere
-                excepturi beatae voluptatem?</h1>
-            <img class="image" data-img="img14.jpg" />
-        </div>
-    </section>
-    <section class="min-height content-desc">
-        <div id="Vehicle-Management-System2" class="carousel slide carousel-style customcardesign" data-ride="carousel"
-            data-interval="false">
-            <div class="carousels-arrows">
-                <a class="left carousel-control" href="#Vehicle-Management-System2" data-slide="prev">
-                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M6.72213 0.518212C7.10418 0.917037 7.09057 1.55006 6.69175 1.9321L2.44561 5.99957L6.69175 10.067C7.09057 10.4491 7.10418 11.0821 6.72213 11.4809C6.34009 11.8798 5.70707 11.8934 5.30825 11.5113L0.308248 6.72171C0.111343 6.53309 -1.23031e-06 6.27224 -1.21786e-06 5.99957C-1.20542e-06 5.7269 0.111343 5.46606 0.308248 5.27744L5.30825 0.487826C5.70707 0.105783 6.34009 0.119387 6.72213 0.518212Z"
-                            fill="#224E7E"></path>
-                    </svg>
-                </a>
-                <span class="carousel_active_no"> 1 / 5</span>
-                <a class="right carousel-control" href="#Vehicle-Management-System2" data-slide="next">
-                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0.277865 11.4818C-0.104178 11.083 -0.0905741 10.4499 0.308251 10.0679L4.55439 6.00043L0.308251 1.93295C-0.090574 1.55091 -0.104178 0.917889 0.277865 0.519064C0.659908 0.120239 1.29293 0.106635 1.69175 0.488678L6.69175 5.27829C6.88866 5.46691 7 5.72776 7 6.00043C7 6.2731 6.88866 6.53394 6.69175 6.72256L1.69175 11.5122C1.29293 11.8942 0.659908 11.8806 0.277865 11.4818Z"
-                            fill="#224E7E"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="carousel-inner carousel-height">
-                <div class="item active">
-                    <div class="imagecont">
-                        <h1 class="main-heading">Placeholder carousel text 1</h1>
-                        <img class="image" data-img="img10.jpg" />
-                    </div>
-                </div>
-                <div class="item">
-                    <button class="modalPop" type="button" data-toggle="modal" data-target="#modalpop1">Modal
-                        Check</button>
-                    <div class="imagecont">
-                        <h1 class="main-heading">Placeholder carousel text 2</h1>
-                        <img class="image" data-img="img11.jpg" />
-                    </div>
-                </div>
-                <div class="item">
-                    <button class="modalPop" type="button" data-toggle="modal" data-target="#modalpop2">Modal
-                        Check</button>
-                    <div class="imagecont">
-                        <h1 class="main-heading">Placeholder carousel text 3</h1>
-                        <img class="image" data-img="img12.jpg" />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <div class="modal fade no-padding custommodalpop pops-height in" id="modalpop1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content modalcontentheight">
-                <div class="modal-body">
-                    <a class="close modalClose" data-dismiss="modal">&#10006;</a>
-                    <div class="imagecont">
-                        <h1 class="main-heading">Modal Heading</h1>
-                        <img class="image" data-img="img15.jpg" />
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>   
+    <div class="loadercont">
+        <div class="loader"></div>
     </div>
-    <div class="modal fade no-padding custommodalpop pops-height in" id="modalpop2" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content modalcontentheight">
-                <div class="modal-body">
-                    <a class="close modalClose" data-dismiss="modal">&#10006;</a>
-                    <div id="modalCarousel" class="carousel slide carousel-style customcardesign"
-                        data-ride="carousel" data-interval="false">
-                        <div class="carousels-arrows">
-                            <a class="left carousel-control" href="#modalCarousel" data-slide="prev">
-                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M6.72213 0.518212C7.10418 0.917037 7.09057 1.55006 6.69175 1.9321L2.44561 5.99957L6.69175 10.067C7.09057 10.4491 7.10418 11.0821 6.72213 11.4809C6.34009 11.8798 5.70707 11.8934 5.30825 11.5113L0.308248 6.72171C0.111343 6.53309 -1.23031e-06 6.27224 -1.21786e-06 5.99957C-1.20542e-06 5.7269 0.111343 5.46606 0.308248 5.27744L5.30825 0.487826C5.70707 0.105783 6.34009 0.119387 6.72213 0.518212Z"
-                                        fill="#224E7E"></path>
-                                </svg>
-                            </a>
-                            <span class="carousel_active_no"> 1 / 5</span>
-                            <a class="right carousel-control" href="#modalCarousel" data-slide="next">
-                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.277865 11.4818C-0.104178 11.083 -0.0905741 10.4499 0.308251 10.0679L4.55439 6.00043L0.308251 1.93295C-0.090574 1.55091 -0.104178 0.917889 0.277865 0.519064C0.659908 0.120239 1.29293 0.106635 1.69175 0.488678L6.69175 5.27829C6.88866 5.46691 7 5.72776 7 6.00043C7 6.2731 6.88866 6.53394 6.69175 6.72256L1.69175 11.5122C1.29293 11.8942 0.659908 11.8806 0.277865 11.4818Z"
-                                        fill="#224E7E"></path>
-                                </svg>
-                            </a>
+    <div class="maincontent hide">       
+        <section class="min-height">
+            <div class="checkelement"></div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img1.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img2.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img3.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img1.png" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img4.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img2.png" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img5.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img10.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img6.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img7.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img8.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img9.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img10.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img11.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img12.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <img class="image" data-img="img13.jpg" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <div class="loadingskeletoncontent">
+                    <div class="skeletonheader">
+                        <div class="skeletontext"></div>
+                        <div class="skeletontext"></div>
+                    </div>
+                    <div class="skeletonbody">
+                        <div class="skeletontext"></div>
+                        <div class="skeletontext"></div>
+                        <div class="skeletontext"></div>
+                    </div>
+
+                </div>
+                <h1>Placeholder Text</h1>
+                <img class="image" data-img="img3.jpg" />
+            </div>
+            <div class="imagecont">
+                <img class="image" data-img="img1.png" />
+            </div>
+        </section>
+        <section class="min-height">
+            <div class="imagecont">
+                <h1 class="main-heading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, praesentium
+                    accusantium! Quas veniam
+                    illo at velit, debitis, ad magnam cupiditate totam recusandae blanditiis culpa nostrum itaque facere
+                    excepturi beatae voluptatem?</h1>
+                <img class="image" data-img="img14.jpg" />
+            </div>
+        </section>
+        <section class="min-height content-desc">
+            <div id="Vehicle-Management-System2" class="carousel slide carousel-style customcardesign"
+                data-ride="carousel" data-interval="false">
+                <div class="carousels-arrows">
+                    <a class="left carousel-control" href="#Vehicle-Management-System2" data-slide="prev">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.72213 0.518212C7.10418 0.917037 7.09057 1.55006 6.69175 1.9321L2.44561 5.99957L6.69175 10.067C7.09057 10.4491 7.10418 11.0821 6.72213 11.4809C6.34009 11.8798 5.70707 11.8934 5.30825 11.5113L0.308248 6.72171C0.111343 6.53309 -1.23031e-06 6.27224 -1.21786e-06 5.99957C-1.20542e-06 5.7269 0.111343 5.46606 0.308248 5.27744L5.30825 0.487826C5.70707 0.105783 6.34009 0.119387 6.72213 0.518212Z"
+                                fill="#224E7E"></path>
+                        </svg>
+                    </a>
+                    <span class="carousel_active_no"> 1 / 5</span>
+                    <a class="right carousel-control" href="#Vehicle-Management-System2" data-slide="next">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.277865 11.4818C-0.104178 11.083 -0.0905741 10.4499 0.308251 10.0679L4.55439 6.00043L0.308251 1.93295C-0.090574 1.55091 -0.104178 0.917889 0.277865 0.519064C0.659908 0.120239 1.29293 0.106635 1.69175 0.488678L6.69175 5.27829C6.88866 5.46691 7 5.72776 7 6.00043C7 6.2731 6.88866 6.53394 6.69175 6.72256L1.69175 11.5122C1.29293 11.8942 0.659908 11.8806 0.277865 11.4818Z"
+                                fill="#224E7E"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="carousel-inner carousel-height">
+                    <div class="item active">
+                        <div class="imagecont">
+                            <h1 class="main-heading">Placeholder carousel text 1</h1>
+                            <img class="image" data-img="img10.jpg" />
                         </div>
-                        <div class="carousel-inner carousel-height">
-                            <div class="item active">
-                                <div class="imagecont">
-                                    <h1 class="main-heading">Placeholder Modal Carousel text 1</h1>
-                                    <img class="image" data-img="img16.jpg" />
+                    </div>
+                    <div class="item">
+                        <button class="modalPop" type="button" data-toggle="modal" data-target="#modalpop1">Modal
+                            Check</button>
+                        <div class="imagecont">
+                            <h1 class="main-heading">Placeholder carousel text 2</h1>
+                            <img class="image" data-img="img11.jpg" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button class="modalPop" type="button" data-toggle="modal" data-target="#modalpop2">Modal
+                            Check</button>
+                        <div class="imagecont">
+                            <h1 class="main-heading">Placeholder carousel text 3</h1>
+                            <img class="image" data-img="img12.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="modal fade no-padding custommodalpop pops-height in" id="modalpop1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modalcontentheight">
+                    <div class="modal-body">
+                        <a class="close modalClose" data-dismiss="modal">&#10006;</a>
+                        <div class="imagecont">
+                            <h1 class="main-heading">Modal Heading</h1>
+                            <img class="image" data-img="img15.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade no-padding custommodalpop pops-height in" id="modalpop2" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modalcontentheight">
+                    <div class="modal-body">
+                        <a class="close modalClose" data-dismiss="modal">&#10006;</a>
+                        <div id="modalCarousel" class="carousel slide carousel-style customcardesign"
+                            data-ride="carousel" data-interval="false">
+                            <div class="carousels-arrows">
+                                <a class="left carousel-control" href="#modalCarousel" data-slide="prev">
+                                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.72213 0.518212C7.10418 0.917037 7.09057 1.55006 6.69175 1.9321L2.44561 5.99957L6.69175 10.067C7.09057 10.4491 7.10418 11.0821 6.72213 11.4809C6.34009 11.8798 5.70707 11.8934 5.30825 11.5113L0.308248 6.72171C0.111343 6.53309 -1.23031e-06 6.27224 -1.21786e-06 5.99957C-1.20542e-06 5.7269 0.111343 5.46606 0.308248 5.27744L5.30825 0.487826C5.70707 0.105783 6.34009 0.119387 6.72213 0.518212Z"
+                                            fill="#224E7E"></path>
+                                    </svg>
+                                </a>
+                                <span class="carousel_active_no"> 1 / 5</span>
+                                <a class="right carousel-control" href="#modalCarousel" data-slide="next">
+                                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.277865 11.4818C-0.104178 11.083 -0.0905741 10.4499 0.308251 10.0679L4.55439 6.00043L0.308251 1.93295C-0.090574 1.55091 -0.104178 0.917889 0.277865 0.519064C0.659908 0.120239 1.29293 0.106635 1.69175 0.488678L6.69175 5.27829C6.88866 5.46691 7 5.72776 7 6.00043C7 6.2731 6.88866 6.53394 6.69175 6.72256L1.69175 11.5122C1.29293 11.8942 0.659908 11.8806 0.277865 11.4818Z"
+                                            fill="#224E7E"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="carousel-inner carousel-height">
+                                <div class="item active">
+                                    <div class="imagecont">
+                                        <h1 class="main-heading">Placeholder Modal Carousel text 1</h1>
+                                        <img class="image" data-img="img16.jpg" />
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="imagecont">
+                                        <h1 class="main-heading">Placeholder Modal Carousel text 2</h1>
+                                        <img class="image" data-img="img17.jpg" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="item">                               
-                                <div class="imagecont">
-                                    <h1 class="main-heading">Placeholder Modal Carousel text 2</h1>
-                                    <img class="image" data-img="img17.jpg" />
-                                </div>
-                            </div>                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </body>
 
 </html>
