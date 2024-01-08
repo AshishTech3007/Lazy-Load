@@ -19,7 +19,7 @@ let callback3 = (entries, observer) => {
         // element.target.classList.toggle("show",element.isIntersecting);  
         // console.log(element.target);   p
         if (element.isIntersecting && element.target.className === 'image') {
-            let parentdiv = element.target.parentElement;
+            let parentdiv = element.target.closest(".imagecont");
             function loaded() {
                 parentdiv.classList.add("loaded");
             }
@@ -111,10 +111,17 @@ let skeletontext_div = `
     </div>
 </div>`;
 
-imageContainer.forEach((localdiv) => {
-    // Insert the HTML string as the first child of the target element
-    localdiv.insertAdjacentHTML('afterbegin', skeletontext_div);
-});
+ imageContainer.forEach((localdiv) => {
+    // Check if any child of localdiv has the class 'loadingskeletoncontent'
+    const hasLoadingSkeletonContent = Array.from(localdiv.children).some(
+      (child) => child.classList.contains("loadingskeletoncontent")
+    );
+
+    if (hasLoadingSkeletonContent) {
+      // Insert the HTML string as the first child of the target element
+      localdiv.insertAdjacentHTML("afterbegin", skeletontext_div);
+    }
+  });
 
 
 
