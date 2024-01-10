@@ -116,8 +116,8 @@ let skeletontext_div = `
     const hasLoadingSkeletonContent = Array.from(localdiv.children).some(
       (child) => child.classList.contains("loadingskeletoncontent")
     );
-
-    if (hasLoadingSkeletonContent) {
+  
+    if (!hasLoadingSkeletonContent) {
       // Insert the HTML string as the first child of the target element
       localdiv.insertAdjacentHTML("afterbegin", skeletontext_div);
     }
